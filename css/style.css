@@ -1,0 +1,503 @@
+body{
+    background:url(../img/back.jpg);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10%;
+   
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    padding-left: 100px;
+ 
+   
+}
+
+h2{
+	color: #000;
+	text-align: center;
+	font-size: 35px;
+	margin-top:-20px;
+
+}
+h5{
+  
+	color: white;
+	text-align: left;
+	padding: 25px;
+	margin-top: 25px;
+	font-size: 20px;
+}
+#contenedor{
+	width: 1200px;
+	min-height: 6000px;
+	margin: 0 auto;
+	justify-content: center;
+	background-color: grey;
+}
+#cabecera{
+	width: 1200px;
+	height: 50px;
+  border-radius:15PX;
+	background-color:silver;
+	position: fixed;
+	z-index: 2;
+}
+.contenedor-galeria{
+  width: 1160px;
+  height: 600px;
+  overflow: hidden;  /*El contenido es recortado y no se muestran barras de posición*/
+  padding-top:100px; 
+}
+.contenedor-galeria li{
+  position: relative;
+  display: block;
+  width: 280px;
+  float: left;
+  box-shadow: 0 0 25px 10px rgba(0,0,0,0.5 );
+  transition: all 0.5s;
+}
+.contenedor-galeria ul:hover li{
+  width: 40px;
+  filter: brightness(50%); /* probaco un efecto de opacidad del 50%*/
+}
+.contenedor-galeria ul li:hover{
+  width: 1000px;
+  filter: brightness(100%);
+}
+.contenedor-galeria li img{
+  display: block;
+  width: 1000px;
+  height: 100%;
+}
+.titulo-imagen{
+  background: rgb(0,0,0,0.8);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  display: block;
+  transition: all 0.5s ease; /* ease indica que la transicion sea de mas a menos*/
+  background-size: 400% 400%;
+
+}
+@keyframes cambia-color{ /*Sirve para controlar los pasos intermedios*/
+  0%{
+    background-position: 0%, 50%;
+  }
+  50%{
+     background-position: 100%, 50%;
+  }
+  100%{
+     background-position: 0%, 100%;
+  }
+}
+.titulo-imagen a{
+  display:block;
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  text-shadow: 0 1px 2px black;
+  transition: all 0.5s ease;
+}
+.contenedor-galeria ul li:hover .titulo-imagen{
+  top:0%;
+  box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
+}
+.titulo-imagen:hover a{
+  transform: scale(1.1);   /*aumenta el tamaño multiplicando su tamaño por 1.1*/
+  transition: all 0.5s ease;
+}
+.titulo-imagen:active{   /*representa un elemento (como un botón) que el usuario está activando */
+  background: rgba(255,255,255,0.5);
+}
+
+#QuienesSomos{
+	width: 1100px;
+	height: 700px;
+	background-color: black;
+	margin-top: 100px;
+	padding-left: 50px;
+  padding-right:50px; 
+}
+
+#ConQuienesTexto{
+	width: 500px;
+	height: 300px;
+	background-color: silver;
+	float: right;
+	padding: 50px;
+  border-radius: 15px;
+}
+ #ConQuienesFoto{
+ 	width: 350px;
+ 	height: 350px;
+ 	float: left;
+ 	background:url(../img/quienes/logo.jpg);
+ 	background-size: 100% 100%;
+  background-repeat:no-repeat;
+  padding: 25px;
+  border-radius: 15px;
+ }
+
+.ServiciosPartes{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    margin-left: 
+}
+.ServiciosTexto{
+	width: 350px;
+	height: 245px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+#Servicios{
+    padding-top: 0px;
+    width: 1200px;
+    height: 1200px;
+    text-align: center;
+    margin-top: 250px;
+    margin-right: 30px;
+    background-color: black;   
+}
+#ServiciosFoto1{
+	width: 350px;
+  margin-left: 40px;
+ 	height: 810px;
+ 	float: left;
+ 	background:url(../img/servi/1.jpg);
+ 	background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+
+#ServiciosFoto2{
+	width: 350px;
+  margin-right: 40px;
+ 	height: 810px;
+ 	float: right;
+ 	background:url(../img/servi/2.jpg);
+ 	background-size: 100% 100%;
+  background-repeat:no-repeat;
+
+}
+
+.iconos{
+	width: 50px;
+	height: 50px;
+	margin-top: -10px;
+
+}
+#Instalaciones{
+	width: 1000px;
+	height: 1000px;
+  text-align: center;
+  margin: 30px;
+  background-color: grey;
+  padding: 70px;
+  padding-top: -120px;
+}
+.InstalacionesTotal{
+	width: 1000px;
+	height: 400px;
+	background-color: black;
+}
+#InstalacionesFotoMadrid{
+	width: 1000px;
+ 	height: 300px;
+ 	float: left;
+ 	background:url(../img/insta/madrid.jpg);
+ 	background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+#InstalacionesFotoBarcelona{
+  width: 1000px;
+  height: 300px;
+  float: left;
+  background:url(../img/insta/barcelona.png);
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+#InstalacionesFotoValencia{
+  width: 1000px;
+  height: 300px;
+  float: left;
+  background:url(../img/insta/valencia.png);
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+
+.InstalacionesTexto{
+	width: 1000px;
+	height: 200px;
+	background-color: black;
+	color: white;
+}
+#Contacto{
+    width: 1200px;
+    height: 800px;
+    text-align: center;
+    background-color: black; 
+}
+
+#Ubicacion{
+  width: 500px;
+  height: 600px;
+  background-color: grey;
+  float: right;
+  margin-right: 55px;
+  border-radius: 25px;
+}
+#Formulario{
+  width: 500px;
+  height: 600px;
+  background-color: grey;
+  float: left;
+  margin-left: 55px;
+  border-radius: 25px;
+}
+.datoF{
+  display: block;
+  width: 450px;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 25px;
+  justify-content: center;
+}
+#Asuntos{
+  display: inline-block;
+  margin-left: 100px;
+  margin-right:100px;
+  margin-top: 25px;
+  justify-content: center;
+  text-align: center;
+}
+.TextoInstalaciones{
+  margin-top: -40px;
+  margin-left: 80px;
+  margin-right: 80px;
+
+}
+#TextoQuienes{
+  text-align: center;
+  font-size: 20px;
+
+}
+#productos{
+  width: 1180px;
+  height: 1400px;
+  text-align: center;
+  background-color: grey;
+  padding-left: 20px;
+
+}
+.svgg{
+margin-left: -50px;
+width: 1200px; 
+}
+.svg{
+  width: 1200px; 
+  margin-left: -100px;
+}
+.ser{
+  color: white;
+}
+.fotos {
+            width: 100%;
+            margin: 0 auto;
+        }
+        /*Para que el contenedor muestre elementos aunque estos sean flotantes*/
+        
+        #container:after {
+            content: " ";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        
+        #container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        /*Estructura de cada componente de la galeria (imagen + descripcion)*/
+        
+        #container div {
+            width: 30%;
+            height: auto;
+            -webkit-transition: -webkit-transform 1s;
+            display: inline;
+            float: left;
+            margin: 0px 3% 0 0;
+            padding: 0;
+        }
+        
+        #container div img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px #666;
+            border: 5px solid #FFF
+        }
+        /*Estructura de la descripcion, por defecto no se muestra*/
+        
+        #container div img~span {
+            width: 100%;
+            display: block;
+            opacity: 0;
+            -webkit-transition: opacity 1s;
+            margin: 0;
+            padding: 2px 5px;
+            color: #FFF;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px #666;
+            text-align: center;
+        }
+        /*Se muestra la descripcion al posicionar el cursor encima de la imagen*/
+        
+        #container div img:hover+span {
+            opacity: 1;
+        }
+        /*Se especifica el comportamiento que tendran las imagenes al posicionar el cursor encima del contenedor*/
+        
+        #container:hover div {
+            opacity: 0.2;
+            -webkit-transform: scale(0.7);
+            -ms-transform: scale(0.7);
+            transform: scale(0.7);
+        }
+        /*Se especifica el comportamiento que tendran la imagen seleccionada*/
+        
+        #container:hover div:hover {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        /*Media query de ejemplo para pantallas de alta resolucion
+        pero pueden haber mas, este media query permite mostrar hasta 5 imagenes por filas
+      */
+        
+
+@media only screen and (max-width: 1400px) {
+nav{
+  margin-left: 5%;
+}
+ }
+
+@media only screen and (max-width: 1100px) {
+
+#contenedor{
+  width: 700px;
+  height: 7250px;
+}
+#cabecera{
+  margin-top: -90px;
+  width: 700px;
+}
+nav a {
+  padding-left: 50px;
+}
+
+ .contenedor-galeria{
+  display: none;
+}
+svg{
+  display: none;
+}
+#ConQuienesFoto{
+  margin-left:25%; 
+  height: 45%;
+  width: 45%;
+  float: left;
+
+}
+#ConQuienesTexto{
+  margin-top:25px;
+  float: left;
+
+}
+#QuienesSomos{
+  width: 600px;
+  height: 900px;
+}
+#Instalaciones{
+  width: 530px;
+  height: 1300px;
+}
+.InstalacionesTotal{
+  margin-left: 50px;
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+#InstalacionesFotoMadrid{
+  width: 400px;
+  height: 200px;
+}
+#InstalacionesFotoBarcelona{
+  width: 400px;
+  height: 200px;
+}
+#InstalacionesFotoValencia{
+  width: 400px;
+  height: 200px;
+}
+.InstalacionesTexto{
+  width: 400px;
+  height: 200px;
+}
+h5 u{
+  justify-content: center;
+}
+#Servicios{
+  justify-content: center;
+  width: 700px;
+  height: 1100px;
+}
+#ServiciosFoto1,#ServiciosFoto2{
+  display: none;
+}
+.ServiciosTexto{
+  background-color: white;
+  margin-left: -80px;
+  border-radius:10px;
+  margin-top:15px;  
+}
+#productos{
+  justify-content: center;
+  width: 680px;
+  height: 2250px;
+}
+#container div {
+  width: 45%;
+}
+#Contacto{
+  justify-content: center;
+  width: 700px;
+  height: 1350px;
+}
+#Formulario{
+  margin-left:100px; 
+  margin-bottom:50px; 
+
+}
+#Ubicacion{
+    margin-left:100px; 
+    float: left;
+
+}
+}
